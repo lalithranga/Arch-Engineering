@@ -1,0 +1,23 @@
+PUT YOUR 5 HERO PHOTOS IN THIS FOLDER
+======================================
+
+File names expected by src/components/sections/Hero.jsx:
+
+  hero-1.jpg
+  hero-2.jpg
+  hero-3.jpg
+  hero-4.jpg
+  hero-5.jpg
+
+Any image format works (.jpg, .png, .webp) as long as you update the
+file extensions in the HERO_IMAGES array in Hero.jsx to match.
+
+Tips:
+- Use landscape (wide) photos, ideally 1920x1080 or larger
+- Compress them first (under ~300KB each) so the hero loads quickly —
+  tools like squoosh.app or TinyPNG work well for this
+- Real photos of finished projects or active job sites work best;
+  avoid generic stock photography if you want the hero to feel authentic
+
+Delete this text file once your real images are in place — it's just
+a placeholder so this folder isn't empty in version control.

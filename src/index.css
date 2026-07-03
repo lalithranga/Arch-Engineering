@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------
+   Base layer overrides
+   These set sane defaults so every page automatically matches the
+   "high-end corporate construction" theme without re-styling per page.
+------------------------------------------------------------------- */
+@layer base {
+  /* Site-wide font-size increase: Tailwind's text-* utilities (text-sm,
+     text-base, text-lg, etc.) are all defined in rem, which is relative
+     to this root size. Bumping it from the browser default (16px) to
+     17.5px scales EVERY text size across the whole site proportionally —
+     headings, body copy, buttons, nav links, form labels — without
+     editing a single Tailwind class anywhere. This is the one place to
+     adjust if the site ever needs to feel larger or smaller overall. */
+  html {
+    font-size: 17.5px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: theme('fontFamily.display');
+    color: theme('colors.ink.DEFAULT');
+    letter-spacing: -0.01em;
+  }
+
+  body {
+    font-family: theme('fontFamily.body');
+  }
+
+  /* Visible keyboard focus ring everywhere — accessibility floor,
+     never remove this without replacing it with an equally visible state. */
+  :focus-visible {
+    outline: 2px solid theme('colors.brand.DEFAULT');
+    outline-offset: 2px;
+  }
+
+  /* Respect users who've asked for reduced motion at the OS level. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Reusable section padding rhythm: py-16 on mobile, py-24 on desktop.
+     Defined once here so every <Section> uses the exact same vertical
+     rhythm called for in the spec, instead of each component guessing. */
+  .section-padding {
+    padding-top: 4rem; /* py-16 */
+    padding-bottom: 4rem;
+  }
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-top: 6rem; /* py-24 */
+      padding-bottom: 6rem;
+    }
+  }
+
+  /* The "blueprint corner" signature mark — a small architectural
+     crosshair/registration-mark motif used sparingly (section labels,
+     card corners) to nod to blueprints/site plans without being kitschy. */
+  .blueprint-mark {
+    position: relative;
+  }
+  .blueprint-mark::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 10px;
+    height: 10px;
+    border-top: 1.5px solid theme('colors.brand.DEFAULT');
+    border-left: 1.5px solid theme('colors.brand.DEFAULT');
+  }
+}
