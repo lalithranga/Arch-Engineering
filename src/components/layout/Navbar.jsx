@@ -48,21 +48,18 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-100">
       <nav className="max-w-content mx-auto flex items-center justify-between px-6 py-4 md:px-10">
-        {/* Logo / wordmark */}
-    <Link to="/" className="flex items-center gap-2.5">
-  {/* Logo image instead of green icon */}
+    <Link to="/" className="flex items-center gap-2">
   <img
-    src="/logo.jpeg"
+    src="/logo.jpg"
     alt="Arch Engineering"
-    className="h-16 w-16 object-contain"
+    className="h-8 w-8 object-contain md:h-10 md:w-10"
   />
-  {/* Wordmark */}
   <div className="flex flex-col leading-tight">
-    <span className="font-display text-3xl font-bold tracking-tight text-ink">
+    <span className="font-display text-sm font-bold tracking-tight text-ink md:text-lg">
       ARCH
     </span>
-    <span className="text-xs font-medium tracking-widest text-ink-soft uppercase">
-      Engineering and Construction Pvt Ltd
+    <span className="text-[10px] font-medium tracking-wider text-ink-soft uppercase md:text-xs md:tracking-widest">
+      Engineering Pvt Ltd
     </span>
   </div>
 </Link>
