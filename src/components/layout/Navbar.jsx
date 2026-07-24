@@ -58,8 +58,8 @@ export default function Navbar() {
   <span className="font-display text-lg font-bold tracking-tight text-ink md:text-2xl">
     ARCH
   </span>
-  <span className="text-[12px] font-medium tracking-wider text-ink-soft uppercase md:text-xs md:tracking-widest">
-    Engineering & construction Pvt Ltd
+  <span className="text-[10px] font-medium tracking-wider text-ink-soft uppercase md:text-xs md:tracking-widest">
+    Engineering & construction (Pvt) Ltd
   </span>
 </div>
 </Link>
