@@ -1,7 +1,6 @@
 import Navbar from '../components/layout/Navbar.jsx';
 import Footer from '../components/layout/Footer.jsx';
 import Section from '../components/layout/Section.jsx';
-import ContactForm from '../components/forms/ContactForm.jsx';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { COMPANY_NAME, COMPANY_ADDRESS, COMPANY_PHONE, COMPANY_EMAIL } from '../utils/constants.js';
 
@@ -48,7 +47,7 @@ export default function Contact() {
         </div>
 
         {/* --- Contact info + form, side by side on larger screens --- */}
-        <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-2">
+      <div className="mt-10">
           <div>
             <h3 className="font-display text-lg font-semibold text-ink">Contact Info</h3>
 
@@ -73,12 +72,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div>
-            <h3 className="font-display text-lg font-semibold text-ink">Send a Message</h3>
-            <div className="mt-4">
-              <ContactForm />
-            </div>
-          </div>
+          
         </div>
       </Section>
 
