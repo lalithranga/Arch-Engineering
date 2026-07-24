@@ -52,13 +52,13 @@ export default function Navbar() {
   <img
   src="/logo.jpeg"
   alt="Arch Engineering"
-  className="h-8 w-8 object-contain md:h-14 md:w-14"
+  className="h-12 w-12 object-contain md:h-14 md:w-14"
 />
 <div className="flex flex-col leading-tight">
-  <span className="font-display text-sm font-bold tracking-tight text-ink md:text-2xl">
+  <span className="font-display text-lg font-bold tracking-tight text-ink md:text-2xl">
     ARCH
   </span>
-  <span className="text-[10px] font-medium tracking-wider text-ink-soft uppercase md:text-xs md:tracking-widest">
+  <span className="text-[12px] font-medium tracking-wider text-ink-soft uppercase md:text-xs md:tracking-widest">
     Engineering & construction Pvt Ltd
   </span>
 </div>
