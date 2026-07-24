@@ -50,18 +50,18 @@ export default function Navbar() {
       <nav className="max-w-content mx-auto flex items-center justify-between px-6 py-4 md:px-10">
     <Link to="/" className="flex items-center gap-2">
   <img
-    src="/logo.jpg"
-    alt="Arch Engineering"
-    className="h-8 w-8 object-contain md:h-10 md:w-10"
-  />
-  <div className="flex flex-col leading-tight">
-    <span className="font-display text-sm font-bold tracking-tight text-ink md:text-lg">
-      ARCH
-    </span>
-    <span className="text-[10px] font-medium tracking-wider text-ink-soft uppercase md:text-xs md:tracking-widest">
-      Engineering Pvt Ltd
-    </span>
-  </div>
+  src="/logo.jpeg"
+  alt="Arch Engineering"
+  className="h-8 w-8 object-contain md:h-14 md:w-14"
+/>
+<div className="flex flex-col leading-tight">
+  <span className="font-display text-sm font-bold tracking-tight text-ink md:text-2xl">
+    ARCH
+  </span>
+  <span className="text-[10px] font-medium tracking-wider text-ink-soft uppercase md:text-xs md:tracking-widest">
+    Engineering & construction Pvt Ltd
+  </span>
+</div>
 </Link>
 
         {/* Desktop links — hidden below md, rigid mobile-first pattern */}
@@ -111,7 +111,6 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-
         {/* Mobile menu toggle */}
         <button
           className="md:hidden text-ink"
@@ -136,7 +135,7 @@ export default function Navbar() {
                       onClick={() =>
                         setOpenMobileSubmenu((current) => (current === link.label ? null : link.label))
                       }
-                      className="flex w-full items-center justify-between py-3 text-base font-medium text-ink-soft hover:text-brand"
+                      className="flex w-full items-center justify-between py-3 text-sm font-medium text-ink-soft hover:text-brand"
                     >
                       {link.label}
                       <ChevronDown
